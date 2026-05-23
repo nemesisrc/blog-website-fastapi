@@ -103,3 +103,203 @@ full-stack-blog/
 ├── .env
 ├── requirements.txt
 └── README.md
+```
+
+---
+
+# ⚙️ Installation & Local Setup
+
+## 📥 1. Clone Repository
+
+```bash
+git clone [https://github.com/yourusername/full-stack-blog.git](https://github.com/yourusername/full-stack-blog.git)
+cd full-stack-blog
+```
+
+## 🐍 2. Create Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+### ▶️ Activate Environment:
+
+**Windows**
+```cmd
+venv\Scripts\activate
+```
+
+**Mac/Linux**
+```bash
+source venv/bin/activate
+```
+
+---
+
+## 📦 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 🔑 4. Configure Environment Variables
+
+Create a `.env` file in the root directory:
+
+```env
+DATABASE_URL=sqlite:///./blog.db
+SECRET_KEY=your_secret_key
+ALGORITHM=HS256
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+```
+
+---
+
+## 🗄️ 5. Run Database Migrations
+
+```bash
+alembic upgrade head
+```
+
+---
+
+## 🚀 6. Start FastAPI Server
+
+```bash
+uvicorn app.main:app --reload
+```
+
+### 🌍 Open in Browser:
+```text
+[http://127.0.0.1:8000](http://127.0.0.1:8000)
+```
+
+---
+
+# 📖 Usage Guide
+
+| Action | Description |
+| :--- | :--- |
+| **Register** | Create a new account |
+| **Login** | Securely authenticate |
+| **Dashboard** | Manage personal blogs |
+| **Create Post** | Publish new articles |
+| **Edit/Delete** | Update or remove content |
+| **Comment** | Engage with readers |
+
+---
+
+# 📸 Screenshots
+
+## 🏠 Homepage
+![Homepage](https://via.placeholder.com/1000x500.png?text=Homepage+Screenshot)
+
+## 📝 Blog Dashboard
+![Dashboard](https://via.placeholder.com/1000x500.png?text=Dashboard+Screenshot)
+
+## 🔐 Login Page
+![Login](https://via.placeholder.com/1000x500.png?text=Login+Page)
+
+---
+
+# 🔌 API Routes Overview
+
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| **GET** | `/` | Homepage |
+| **GET** | `/blogs` | View all blogs |
+| **GET** | `/blog/{id}` | View single blog |
+| **POST** | `/create-blog` | Create blog |
+| **PUT** | `/update-blog/{id}` | Update blog |
+| **DELETE** | `/delete-blog/{id}` | Delete blog |
+| **POST** | `/register` | User registration |
+| **POST** | `/login` | User login |
+
+---
+
+# 🌍 Deployment Options
+
+### 🚀 Render
+1. Connect your GitHub repository to Render.
+2. Add your environment variables under the **Environment** tab.
+3. Click **Deploy**.
+
+### 🚂 Railway
+1. Import your repository into Railway.
+2. Provision and configure a PostgreSQL database.
+3. Click **Deploy**.
+
+### 🐳 Docker
+```bash
+docker build -t fullstackblog .
+docker run -p 8000:8000 fullstackblog
+```
+
+### 🖥️ VPS Setup
+- **Web Server:** Nginx
+- **Process Manager:** Gunicorn/Uvicorn
+- **Database:** PostgreSQL
+- **SSL:** Certbot (Let's Encrypt)
+
+---
+
+# 💡 Future Improvements
+
+- 🔔 Real-time Notifications
+- 📧 Email Verification Setup
+- 🌙 Dark Mode Toggle
+- 📈 SEO Optimization Rules
+- 📊 Interactive Analytics Dashboard
+- 🤖 AI-Driven Blog Recommendations
+- ☁️ Cloud Media Uploads (AWS S3 / Cloudinary)
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome! Please follow these simple steps:
+
+1. **Fork** the repository
+2. **Create** your feature branch (`git checkout -b feature/AmazingFeature`)
+3. **Commit** your changes (`git commit -m 'Add some AmazingFeature'`)
+4. **Push** to the branch (`git push origin feature/AmazingFeature`)
+5. **Open** a Pull Request
+
+---
+
+# 📜 License
+
+This project is licensed under the **MIT License**. Feel free to use, modify, and distribute it as needed.
+
+---
+
+# 👨‍💻 Author
+
+### Rajdeep Chakraborty
+💼 Software Developer | Full Stack Developer | Backend Engineer
+
+- 🌐 Portfolio: [your-portfolio-link](https://your-portfolio-link)
+- 💼 LinkedIn: [your-linkedin-link](https://your-linkedin-link)
+- 🐙 GitHub: [your-github-link](https://your-github-link)
+- 📧 Email: your-email@example.com
+
+---
+
+# 🌟 Support
+
+If you found this project helpful, please consider taking a moment to:
+- ⭐ **Star** the Repository
+- 🍴 **Fork** It
+- 🛠️ **Contribute** to its development
+
+---
+
+<div align="center">
+
+## 🚀 Designed for Recruiters, Developers & Open Source Excellence
+
+### "Code. Create. Scale."
+
+</div>
